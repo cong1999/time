@@ -2,7 +2,6 @@ name: test time
 on:
   push:
     branches: main
-
 jobs:
   build-test:
       runs-on: ubuntu-latest
