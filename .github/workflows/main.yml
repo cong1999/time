@@ -1,0 +1,13 @@
+name: test time
+on:
+  push:
+    branches: main
+
+jobs:
+  build-test:
+      runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: date -R
+        run: |
+          date -R
