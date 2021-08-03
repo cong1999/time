@@ -3,7 +3,7 @@ on:
   push:
   schedule:
   # 定时任务时间
-    - cron: '35 6 * * *'
+    - cron: '38 14 * * *'
 jobs:
   build-test:
     runs-on: ubuntu-latest
