@@ -1,14 +1,18 @@
-name: BuildAndTestAndPush
+name: 'GitHub Actions Weather Bot'
+ 
 on:
   push:
   schedule:
-  # 定时任务时间
+  # 定时任务，在每天的5点推送天气信息到邮箱
     - cron: '* * * * *'
+
 jobs:
-  build-test:
+  bot:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: git clone ibpv2-entity
-        run: |
-          date -R
+    # 首先copy git仓库到虚拟机上
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+      # 获取格式化的日期并存入GitHub内置的环境变量中
+      - name: 'Get Date'
+        run: echo "$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" 
