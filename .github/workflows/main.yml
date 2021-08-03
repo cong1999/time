@@ -1,5 +1,6 @@
 name: BuildAndTestAndPush
 on:
+  push:
   schedule:
   # 定时任务时间
     - cron: '* * * * *'
