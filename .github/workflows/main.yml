@@ -2,7 +2,7 @@ name: BuildAndTestAndPush
 on:
   schedule:
   # 定时任务时间
-    - cron: '43 * * * *'
+    - cron: '* * * * *'
 jobs:
   build-test:
     runs-on: ubuntu-latest
